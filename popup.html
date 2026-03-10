@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YT to NotebookLM</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1>YT to NotebookLM</h1>
+      <p id="pageType">Detecting page...</p>
+
+      <div class="actions">
+        <button id="collectBtn">Collect Channel Videos</button>
+        <button id="prepareQueueBtn">Prepare Import Queue</button>
+      </div>
+
+      <div class="actions">
+        <button id="refreshNotebookBtn">Refresh Notebook Cache</button>
+        <button id="runImportBtn">Run Import Queue</button>
+      </div>
+
+      <label class="field">
+        <span>Channel or title filter</span>
+        <input id="channelFilterInput" type="text" placeholder="Filter text" />
+      </label>
+
+      <div class="actions">
+        <button id="applyFilterBtn">Apply Filter</button>
+        <button id="scanBtn">Quick Scan</button>
+      </div>
+
+      <pre id="statusBox">Ready.</pre>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

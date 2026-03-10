@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "YT to NotebookLM Helper",
+  "version": "0.1.0",
+  "description": "Manage YouTube video selection and NotebookLM source deduping.",
+  "permissions": ["storage", "tabs", "scripting", "activeTab"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://notebooklm.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "YT to NotebookLM Helper",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*"
+      ],
+      "js": ["shared.js", "youtube.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://notebooklm.google.com/*"
+      ],
+      "js": ["shared.js", "notebooklm.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

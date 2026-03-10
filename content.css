@@ -1,0 +1,67 @@
+.ytnb-hidden-by-extension {
+  display: none !important;
+}
+
+.ytnb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 600;
+  background: #1f2937;
+  color: #fff;
+}
+
+.ytnb-badge[data-state='added'] {
+  background: #065f46;
+}
+
+.ytnb-badge[data-state='new'] {
+  background: #1d4ed8;
+}
+
+.ytnb-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  width: 320px;
+  max-height: 70vh;
+  overflow: auto;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.96);
+  color: #f9fafb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  font-family: Arial, sans-serif;
+}
+
+.ytnb-panel h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.ytnb-panel button,
+.ytnb-panel input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+}
+
+.ytnb-panel button {
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.ytnb-panel .muted {
+  color: #cbd5e1;
+  font-size: 12px;
+}
